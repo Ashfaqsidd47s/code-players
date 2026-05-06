@@ -1,21 +1,38 @@
-import { Button } from "@/components/ui/button"
+
+import NewHero from "./components/hero/new-hero";
+import Projects from "./components/projects/projects";
+import ModernFooter from "./components/footer/footer";
+import useIsMobile from "./hooks/use-is-mobile";
+import CodePlayersNavbar from "./components/navbar";
+import FeaturesSection from "./components/hero/feature-section";
+import ProjectGallery from "./components/project-gallery/project-gallery";
+import PricingSection from "./components/hero/pricing-section";
+import OnboardingProcess from "./components/hero/onboarding-process";
 
 export function App() {
-  return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
+  const isMobile = useIsMobile();
+
+    if (isMobile === null) {
+        // render instant fallback
+        return (
+            <div className="flex h-screen w-full items-center justify-center">
+                <p className="text-sm opacity-50">Loading...</p>
+            </div>
+        );
+    }
+
+    return (
         <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
+            <CodePlayersNavbar />
+            <NewHero />
+            <ProjectGallery />
+            <FeaturesSection />
+            <Projects />
+            <PricingSection />
+            <OnboardingProcess />
+            <ModernFooter />
+        </div>    
+    );
 }
 
 export default App
