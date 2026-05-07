@@ -43,7 +43,7 @@ export default function OnboardingProcess() {
       className="relative overflow-hidden bg-background py-28 text-foreground"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
+      <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-background to-background" />
       <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 

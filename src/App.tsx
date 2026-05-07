@@ -1,13 +1,16 @@
 
 import NewHero from "./components/hero/new-hero";
 import Projects from "./components/projects/projects";
-import ModernFooter from "./components/footer/footer";
 import useIsMobile from "./hooks/use-is-mobile";
-import CodePlayersNavbar from "./components/navbar";
 import FeaturesSection from "./components/hero/feature-section";
 import ProjectGallery from "./components/project-gallery/project-gallery";
 import PricingSection from "./components/hero/pricing-section";
 import OnboardingProcess from "./components/hero/onboarding-process";
+import AboutSection from "./components/hero/about";
+import StepProcess from "./components/hero/step-process";
+import Footer from "./components/hero/footer";
+import TestimonialsSection from "./components/hero/testimonial-section";
+import NewNavBar from "./components/hero/new-nav-bar";
 
 export function App() {
   const isMobile = useIsMobile();
@@ -22,15 +25,19 @@ export function App() {
     }
 
     return (
-        <div>
-            <CodePlayersNavbar />
+        <div className=" bg-background">
+            <NewNavBar />
             <NewHero />
+            <AboutSection />
+            <StepProcess />
             <ProjectGallery />
+
             <FeaturesSection />
             <Projects />
             <PricingSection />
             <OnboardingProcess />
-            <ModernFooter />
+            <TestimonialsSection />
+            <Footer />
         </div>    
     );
 }

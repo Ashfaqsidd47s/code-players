@@ -127,7 +127,7 @@ export default function PricingSection() {
                 >
                   {plan.highlighted && (
                     <>
-                      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0" />
+                      <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-primary/0 via-primary to-primary/0" />
                       <div className="absolute right-4 top-4 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
                         Most Popular
                       </div>

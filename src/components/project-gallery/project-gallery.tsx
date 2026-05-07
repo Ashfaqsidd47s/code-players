@@ -75,7 +75,7 @@ export default function ProjectGallery() {
         >
             <div
                 ref={containerRef}
-                className="bg-primary/10 flex h-[180vh] w-full justify-center gap-6 overflow-hidden"
+                className=" flex h-[180vh] w-full justify-center gap-6 overflow-hidden"
             >
                 <Row images={imageArr} y={y4} />
                 <Row images={imageArr2} y={y} />
